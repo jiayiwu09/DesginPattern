@@ -1,4 +1,4 @@
-package com.DesignPatterns.Command.editor;
+package com.DesignPatterns.Command.Editor;
 
 public interface ICommand {
     void execute();

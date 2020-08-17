@@ -1,4 +1,4 @@
-package com.DesignPatterns.Command.editor;
+package com.DesignPatterns.Command.Editor;
 
 public class HtmlDocument {
     private String content;

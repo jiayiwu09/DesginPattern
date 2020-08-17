@@ -1,10 +1,10 @@
 package com.DesignPatterns.Command;
 
 import com.DesignPatterns.Command.FX.Button;
-import com.DesignPatterns.Command.editor.BoldCommand;
-import com.DesignPatterns.Command.editor.History;
-import com.DesignPatterns.Command.editor.HtmlDocument;
-import com.DesignPatterns.Command.editor.UndoCommand;
+import com.DesignPatterns.Command.Editor.BoldCommand;
+import com.DesignPatterns.Command.Editor.History;
+import com.DesignPatterns.Command.Editor.HtmlDocument;
+import com.DesignPatterns.Command.Editor.UndoCommand;
 
 public class Main {
     public static void main(String[] args) {

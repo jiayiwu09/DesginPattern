@@ -1,9 +1,7 @@
-package com.DesignPatterns.Command.editor;
+package com.DesignPatterns.Command.Editor;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Deque;
-import java.util.List;
 
 public class History {
     private Deque<IUndoableCommand> commands = new ArrayDeque<>();
