@@ -8,5 +8,10 @@ public class Main {
         var command = new AddCustomerCommand(service);
         var button = new Button(command);
         button.click();
+
+        var commands = new CompositeCommand();
+        commands.add(new ResizeCommand());
+        commands.add(new BlackAndWhiteCommand());
+        commands.execute();
     }
 }
