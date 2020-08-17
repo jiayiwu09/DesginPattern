@@ -1,6 +1,10 @@
 package com.DesignPatterns.Command;
 
 import com.DesignPatterns.Command.FX.Button;
+import com.DesignPatterns.Command.editor.BoldCommand;
+import com.DesignPatterns.Command.editor.History;
+import com.DesignPatterns.Command.editor.HtmlDocument;
+import com.DesignPatterns.Command.editor.UndoCommand;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +17,20 @@ public class Main {
         commands.add(new ResizeCommand());
         commands.add(new BlackAndWhiteCommand());
         commands.execute();
+
+        var history = new History();
+        var document = new HtmlDocument();
+        document.setContent("Hello World");
+
+        var boldCommand = new BoldCommand(document, history);
+        boldCommand.execute();
+        System.out.println(document.getContent());
+
+        boldCommand.unexecute();
+        System.out.println(document.getContent());
+
+        var undoCommand = new UndoCommand(history);
+        undoCommand.execute();
+        System.out.println(document.getContent());
     }
 }
